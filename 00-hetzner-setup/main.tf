@@ -49,7 +49,7 @@ resource "hcloud_server" "lab" {
   name         = each.key
   image        = "ubuntu-24.04"
   server_type  = "cax11"
-  location     = "fsn1"
+  location     = "hel1"
   ssh_keys     = [each.key]
   firewall_ids = [hcloud_firewall.fw.id]
 

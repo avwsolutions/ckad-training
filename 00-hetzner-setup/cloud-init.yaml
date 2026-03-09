@@ -9,6 +9,16 @@ packages:
   - gnupg
   - lsb-release
 
+write_files:
+  - path: /etc/profile.d/k8s.sh
+    permissions: "0755"
+    content: |
+      #!/bin/bash
+      source <(kubectl completion bash)
+      echo "source <(kubectl completion bash)" >> ~/.bashrc
+      alias k=kubectl
+      complete -o default -F __start_kubectl k
+
 runcmd:
   - |
     # Install Docker
@@ -45,4 +55,3 @@ runcmd:
     git clone https://github.com/enact-it/ckad-training.git /root/ckad-training
 
 final_message: "✅ Cloud-init complete. Kind + Docker + kubectl + Helm are installed."
-
