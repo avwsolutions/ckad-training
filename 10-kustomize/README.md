@@ -31,3 +31,7 @@ kubectl apply -k overlays/acc
 ## 03. Implement Production environment using Kustomize templates
 
 Now try it yourself for production, which has a requirement of 6 replicas.
+
+## 04. Implement a PostgreSQL environment using Kustomize templates
+
+Now try to build your own `Kustomize` scripts. For inspiration have a look at [postgres_example](./postgres_example/).
