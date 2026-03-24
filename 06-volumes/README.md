@@ -52,8 +52,8 @@ kubectl exec -it hostpath-pod -- touch /tmp/data/survivor
 kubectl delete pod hostpath-pod
 kubectl apply -f hostpath-pod.yaml
 kubectl exec -it hostpath-pod -- ls /tmp/data
-kubectl delete pvc hostpath-pvc
 kubectl delete pod hostpath-pod
+kubectl delete pvc hostpath-pvc
 kubectl apply -f hostpath-pvc.yaml
 kubectl apply -f hostpath-pod.yaml
 kubectl exec -it hostpath-pod -- ls /tmp/data
