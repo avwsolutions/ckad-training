@@ -67,7 +67,7 @@ Let's give it a try.
 
 ```bash
 echo GreatestPassword | base64
-kubectl patch secret secret --type json -p '[{"op":"update","path":"/data/password","value":"R3JlYXRlc3RQYXNzd29yZAo="}]'
+kubectl patch secret secret --type json -p '[{"op":"add","path":"/data/password","value":"R3JlYXRlc3RQYXNzd29yZAo="}]'
 ```
 
 Validate the 'password` values again, which are available within the Pod. Which is reflecting your change? Variable or the mounted volume'.
