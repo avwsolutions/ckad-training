@@ -72,8 +72,8 @@ Inspect the manifest and apply it using `kubectl apply`. Ensure it's applied in 
 Now let's test the current access on both port *80* and port *443*. For this assignment you need to use the current ip address of the pod. You can get this using `kubectl get pods -o wide`.
 
 ```bash
-run curly --rm -it --restart=Never --image=curlimages/curl -n protected -- curl 100.64.1.247:80
-run curly --rm -it --restart=Never --image=curlimages/curl -n protected -- curl 100.64.1.247:443
+kubectl run curly --rm -it --restart=Never --image=curlimages/curl -n protected -- curl 100.64.1.247:80
+kubectl run curly --rm -it --restart=Never --image=curlimages/curl -n protected -- curl 100.64.1.247:443
 ```
 
 Now let's apply the `NetworkPolicy`, which acts on *L4*.
