@@ -4,7 +4,7 @@
 
 This exercise we are going to create a `hardened` pod.  For this we have used the following specs:
 
-- Esnure the container runs the `alpine` version of `nginx`.
+- Ensure the container runs the `alpine` version of `nginx`.
 - Ensure the container does not run with `root` privileges.
 - Ensure the user ID (UID) is set to '1000;.
 - Ensure the container does not has any syscall privileges.
